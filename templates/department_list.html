@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Department List</h2>
+  <ul>
+    {% for department in departments %}
+      <li>{{ department.name }} - Floor: {{ department.floor }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'employee_app:department-create' %}">Add Department</a>
+{% endblock %}
